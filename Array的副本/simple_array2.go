@@ -23,7 +23,8 @@ package Array
 func Reverse(x int) int {
 	var res int
 	for x != 0 {
-		if temp := int32(res); (temp*10)/10 != temp {
+		if temp := int64(res); (temp*10)/10 != temp && temp != 0{
+			//忽略这个信息
 			return 0
 		}
 		res = res*10 + x%10

@@ -15,10 +15,10 @@ package Array
 */
 func TwoSum(nums []int, target int) []int {
 
-	for i, v := range nums {
-		for j := i + 1; j < len(nums); j++ {
+	for k, v := range nums {
+		for j := k + 1; j < len(nums); j++ {
 			if v+nums[j] == target {
-				return []int{i, j}
+				return []int{k, j}
 			}
 		}
 	}
